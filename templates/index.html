@@ -10,12 +10,23 @@
 
 <body>
   <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
+  <h3>Dalle API</h3>
   <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
+    <input type="text" name="animal" placeholder="Enter a prompt" required />
+    <input type="submit" value="Generate Images" />
   </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
+  {% if result0 %}
+  <div class="grid3x3">
+  <div><img src="{{ result0 }}"/></div>
+  <div><img src="{{ result1 }}"/></div>
+  <div><img src="{{ result2 }}"/></div>
+  <div><img src="{{ result3 }}"/></div>
+  <div><img src="{{ result4 }}"/></div>
+  <div><img src="{{ result5 }}"/></div>
+  <div><img src="{{ result6 }}"/></div>
+  <div><img src="{{ result7 }}"/></div>
+  <div><img src="{{ result8 }}"/></div>
+  </div>
   {% endif %}
+
 </body>
